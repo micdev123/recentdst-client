@@ -1,17 +1,15 @@
 import { useEffect, useRef, useState } from 'react'
-import TopNav from '../components/TopNav'
-import { BiCurrentLocation, BiShapeCircle, BiSolidPhone } from "react-icons/bi"
-import { MdEmail, MdOutlineNavigateBefore, MdOutlineNavigateNext, MdShapeLine } from "react-icons/md"
-import { TbStarsFilled } from "react-icons/tb"
-import { PiCompassToolBold } from "react-icons/pi"
-import { RiSendPlaneFill } from 'react-icons/ri'
+import { BiCurrentLocation, BiSolidPhone } from "react-icons/bi"
+import { MdEmail, MdOutlineNavigateBefore, MdOutlineNavigateNext } from "react-icons/md"
+
 import { ImQuotesLeft } from "react-icons/im"
 import { AiOutlinePlus, AiOutlineMinus, AiFillInstagram } from "react-icons/ai"
 import { FaSquareXTwitter } from "react-icons/fa6"
 import { FaFacebookSquare } from "react-icons/fa"
 import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io"
-import { accordions, orgs, projects, services, sliderContent } from '../data'
+import { accordions, orgs, projects, services } from '../data'
 import throttle from 'lodash.throttle';
+import Header from '../components/Home/Header'
 
 
 const Home = () => {
@@ -21,21 +19,13 @@ const Home = () => {
     const [accordion, setAccordion] = useState(-1)
     const [dropInfo, setDropInfo] = useState(false);
 
-    const slideRef = useRef(null); // Header Slider Ref
+   
     const services_container = useRef(null); // Services slider Ref
     const tabSlideRef = useRef(null);
 
-    const autoSlide = true;
-    const autoSlideInterval = 3000;
-    const [current, setCurrent] = useState(0);
+    
 
-    const next = () => setCurrent(curr => (curr + 1) % sliderContent?.length);
-
-    useEffect(() => {
-        if (!autoSlide) return
-        const slideInterval = setInterval(next, autoSlideInterval);
-        return () => clearInterval(slideInterval) // When carousal unmount
-    }, [autoSlide])
+    
 
 
     
@@ -105,77 +95,6 @@ const Home = () => {
 
     return (
         <div className=''>
-            <header className="header max-w-[90%] h-[100%]  mx-auto sm:max-w-[90%] xl:max-w-[80%]">
-                <TopNav />
-                {/* Header Container */}
-                <section className="header-container  flex flex-col items-center justify-center gap-[2rem] p-[1.5rem] rounded-md relative md:h-[80vh] md:flex-row md:p-[3rem]">
-                    {/* Header Hero Text Content */}
-                    <div className="hero-text-content w-[100%] md:max-w-[48%]">
-                        <p className='text-[11px] font-medium'>
-                            Innovate. Ignite. Invest.
-                        </p>
-                        <div className="flex overflow-hidden">
-                            <div className="transition-transform linear duration-500" ref={slideRef}>
-                                <h2 className='text-[1.3rem] mb-3 font-medium md:text-[1.8rem] md:leading-[2.5rem]'>
-                                    {sliderContent[current].name}
-                                </h2>
-                                <p className='text-[13.5px]'>
-                                    {sliderContent[current].info}
-                                </p>
-                            </div>
-                        </div>
-                        {/* <div className="client-img">
-                            <div className="imgs">
-                                <div className="img">
-                                    <img src="/assets/1.png" alt="" />
-                                </div>
-                            </div>
-                        </div> */}
-                        {/* Proof */}
-                        {/* <div className=""></div> */}
-                        <button className='text-[11px] rounded-sm mt-[1rem] bg-zinc-700 text-white py-[5px] px-[15px] flex items-center gap-x-2 border-0'>
-                            <RiSendPlaneFill className='text-[14px]' />
-                            Let's Talk
-                        </button>
-                    </div>
-                    {/* Header Hero Image Container */}
-                    <div className="hero-image w-[100%] md:w-[30rem]">
-                        <img src="/assets/hero-1.jpg" alt="" className='w-[100%] h-[100%] object-cover rounded-md' />
-                    </div>
-                    
-                    <div className="shapes_container">
-                        <BiShapeCircle className='absolute top-0 right-0 text-[1.5rem] text-zinc-300 font-light md:top-[2rem] md:right-[3rem]' />
-                        <MdShapeLine className='absolute bottom-[-1rem] left-0 text-[1.2rem] text-green-200 font-light' />
-                        <TbStarsFilled className='hidden absolute text-[1.2rem] text-zinc-300 font-light md:block md:top-[20%] md:left-[30%]' />
-                        <PiCompassToolBold className='absolute top-[10%] left-[-2%] text-[1rem] text-zinc-300' />
-                    </div>
-                    {/* <div className="cards absolute bottom-[-1rem]">
-                        <div className="card hidden absolute w-[15rem] bg-white rounded-md p-3 sm:block sm:bottom-[15%] md:bottom-[20%] lg:bottom-[20%] xl:bottom-[3.5rem] xl:right-[-5rem]">
-                            <div className="head flex items-center gap-x-2">
-                                <div className="img w-[2rem] h-[2rem] bg-zinc-300 rounded-md flex items-center justify-center">
-                                    <img src="/assets/3.png" alt="" className='w-[100%] object-cover' />
-                                </div>
-                                <h2 className='text-[12px] name font-medium'>SonakoHomes</h2>
-                            </div>
-                            <p className='text-[10.5px] mt-2'>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, numquam.
-                            </p>
-                        </div>
-
-                        <div className="card hidden  w-[15rem] bg-white rounded-md p-3 sm:block sm:bottom-[15%] md:bottom-[20%] lg:bottom-[20%]">
-                            <div className="head flex items-center gap-x-2">
-                                <div className="img w-[2rem] h-[2rem] bg-zinc-300 rounded-md flex items-center justify-center">
-                                    <img src="/assets/3.png" alt="" className='w-[100%] object-cover' />
-                                </div>
-                                <h2 className='text-[12px] name font-medium'>elp.</h2>
-                            </div>
-                            <p className='text-[10.5px] mt-2'>
-                                Lorem ipsum dolor sit amet consectetur adipisicing elit. Animi, numquam.
-                            </p>
-                        </div>
-                    </div> */}
-                </section>
-            </header>
             {/* Main */}
             <main className='my-[5rem]'>
                 {/* Services */}
@@ -208,7 +127,7 @@ const Home = () => {
                         {/* Services Cards */}
                         <div className="services-cards w-[100%] mt-[1rem] flex overflow-x-scroll scrollbar scrollbar-w-[1px] scrollbar-h-[1px] md:gap-x-[1rem]" ref={services_container}>
                             {services?.map((service) => {
-                                const { id, name, icon, image, info } = service;
+                                const { id, name, icon, info } = service;
                                 return (
                                     <div className="service-card min-w-[100%] bg-zinc-100 rounded-md p-[1.5rem] md:min-w-[20rem]" key={id}>
                                         <div className="icon w-[2rem] mb-4">
@@ -285,7 +204,7 @@ const Home = () => {
                                     <div className="content w-[25rem] h-[20rem] relative" key={project?.id}>
                                         <div className="img w-[25rem] h-[20rem] relative rounded-sm">
                                             <div className="w-[100%] h-[100%] bg-zinc-800 absolute rounded-sm opacity-70"></div>
-                                            <img src={project?.image} alt="" className='w-[100%] h-[100%] object-cover rounded-sm' />
+                                            <img src={project?.cover_img} alt="" className='w-[100%] h-[100%] object-cover rounded-sm' />
                                         </div>
                                         <div className="text-content absolute bottom-[1rem] p-3 text-white font-medium">
                                             <p className="text-[11px]">
@@ -304,7 +223,7 @@ const Home = () => {
                                                     {/* Overlay Background */}
                                                     <div className="w-[100%] h-[100%] bg-zinc-800 absolute rounded-sm opacity-60"></div>
                                                     {/* Current Project Image */}
-                                                    <img src={currProject?.image} alt="project image" className='w-[100%] h-[100%] object-cover rounded-sm' />
+                                                    <img src={currProject?.cover_img} alt="project image" className='w-[100%] h-[100%] object-cover rounded-sm' />
                                                 </div>
                                                 {/* Current Project Textual Content */}
                                                 <div className="text-content absolute bottom-[1rem] p-3 text-white font-medium">
@@ -479,26 +398,7 @@ const Home = () => {
                                 ))}
                             </div>
                         </div>
-                        {/* Contact */}
-                        <div className="contact">
-                            <h3 className='text-[1.8rem] font-medium md:text-center'>
-                                Let's discuss collaboration!
-                            </h3>
-                            <form action="">
-                                <div className="form-group my-[1.2rem]">
-                                    <label htmlFor="name" className='text-[13.5px] font-medium'>Name</label>
-                                    <input type="text" placeholder='Enter fullname' className='w-[100%] text-[11px] py-[7px] px-[10px] border-b-[1.5px] outline-none' />
-                                </div>
-                                <div className="form-group my-[1.2rem]">
-                                    <label htmlFor="email" className='text-[13.5px]'>Email</label>
-                                    <input type="email" placeholder='Enter email' className='w-[100%] text-[11px] py-[7px] px-[10px] border-b-[1.5px] outline-none' />
-                                </div>
-                                <div className="form-group my-[1.2rem]">
-                                    <label htmlFor="name" className='text-[13.5px]'>Message</label>
-                                    <textarea name="" id="" cols="30" rows="10" placeholder='Message' className='w-[100%] text-[11px] p-[10px] border-b-[1.5px] outline-none'></textarea>
-                                </div>
-                            </form>
-                        </div>
+                        
                     </div>
                 </div>
             </main>

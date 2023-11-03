@@ -7,13 +7,13 @@
 @tailwind utilities;
 
 body {
-    background-color: #f9f9f9;
+    background-color: #f7f7f7;
 }
 
 
 .header-container {
   background: #f9f9f9;
-  background: linear-gradient(80deg, #f8f7f7, #edf4f6);
+  background: linear-gradient(80deg, #f8f8f8, #edf4f6);
 }
 
 .logo, .name {
