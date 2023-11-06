@@ -49,3 +49,7 @@ body {
 .active .desc {
     @apply flex
 }
+
+.mobile_nav li {
+  margin: 10px 0;
+}

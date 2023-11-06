@@ -6,12 +6,13 @@ import { Link } from "react-router-dom";
 
 const TopNav = () => {
     const [openContactModal, setOpenContactModal] = useState(false); // Contact form modal
+    const [mobileNav, setMobileNav] = useState(false)
     // Methods managing modal
     const handleOpenModal = () => setOpenContactModal(true);
     const handleCloseModal = () => setOpenContactModal(false);
     return (
         <div className='top-nav pt-6 pb-4 relative'>
-            <div className={openContactModal ? 'w-[100%] h-[100%] fixed top-0 left-0 bg-zinc-900 opacity-[0.2] z-10' : ''}></div>
+            <div className={openContactModal | mobileNav ? 'w-[100%] h-[100%] fixed top-0 left-0 bg-zinc-900 opacity-[0.2] z-10' : ''}></div>
             {openContactModal && (
                 <div className="contact_form w-[90%] absolute top-[3rem] right-0 left-0 mx-auto bg-white rounded-md p-[2rem] z-10 md:w-fit">
                     <Contact onClose={handleCloseModal} />
@@ -53,7 +54,37 @@ const TopNav = () => {
                             Let's Talk
                         </button>
                     </div>
-                    <FiMenu className='sm:hidden' />
+                    <FiMenu
+                        onClick={() => setMobileNav(!mobileNav)}
+                        className='sm:hidden cursor-pointer z-40'
+                    />
+                    {/* Mobile Nav */}
+                    {mobileNav && (
+                        <div className="mobile_nav w-[100%] absolute top-[3.5rem] bg-white p-[2rem] text-[14px] rounded-md z-30">
+                            <li>
+                                About Us
+                            </li>
+                            <li>
+                                Services
+                            </li>
+                            <li>
+                                Portfolio
+                            </li>
+                            <li>
+                                Contact
+                            </li>
+                            <button
+                                onClick={() => {
+                                    handleOpenModal();
+                                    setMobileNav(false)
+                                }}
+                                className='w-[100%] text-[11px] rounded-sm bg-zinc-700 text-white py-[6px] flex items-center justify-center mt-[1rem] border-0 outline-none'
+                            >
+                                <RiSendPlaneFill className='text-[14px]' />
+                                Let's Talk
+                            </button>
+                        </div>
+                    )}
                 </ul>
             </nav>
         </div>

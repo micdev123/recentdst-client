@@ -65,7 +65,7 @@ const Services = () => {
                     {services?.map((service) => {
                         const { id, name, icon, info } = service;
                         return (
-                            <div className="service-card min-w-[100%] bg-zinc-100 rounded-md p-[1.5rem] md:min-w-[20rem]" key={id}>
+                            <div className="service-card min-w-[100%] bg-zinc-200 rounded-md p-[1.5rem] md:min-w-[20rem] md:bg-zinc-100" key={id}>
                                 <div className="icon w-[2rem] mb-4">
                                     <img src={icon} alt="" />
                                 </div>
