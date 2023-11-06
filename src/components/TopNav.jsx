@@ -14,7 +14,7 @@ const TopNav = () => {
         <div className='top-nav pt-6 pb-4 relative'>
             <div className={openContactModal | mobileNav ? 'w-[100%] h-[100%] fixed top-0 left-0 bg-zinc-900 opacity-[0.2] z-10' : ''}></div>
             {openContactModal && (
-                <div className="contact_form w-[90%] absolute top-[3rem] right-0 left-0 mx-auto bg-white rounded-md p-[2rem] z-10 md:w-fit">
+                <div className="contact_form w-[100%] absolute top-[3rem] right-0 left-0 mx-auto bg-white rounded-md p-[2rem] z-10 md:w-fit">
                     <Contact onClose={handleCloseModal} />
                 </div>
             )}
