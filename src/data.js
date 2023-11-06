@@ -24,21 +24,21 @@ export const sliderContent = [
 export const services = [
     {
         id: 1,
-        slug: "market",
+        slug: "market research",
         name: "Market Research & Intelligence",
         icon: "/assets/market.png",
         info: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio molestiae reiciendis perferendis dolor, optio necessitatibus sint mollitia a ducimus, omnis laudantium, iure minus in saepe.`
     },
     {
         id: 2,
-        slug: "business",
+        slug: "business development",
         name: "Business Development Services",
         icon: "/assets/business.png",
         info: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio molestiae reiciendis perferendis dolor, optio necessitatibus sint mollitia a ducimus, omnis laudantium, iure minus in saepe.`
     },
     {
         id: 3,
-        slug: "scientific",
+        slug: "scientific research",
         name: "Scientific & Technology Research",
         icon: "/assets/science.png",
          info: `Lorem, ipsum dolor sit amet consectetur adipisicing elit. Odio molestiae reiciendis perferendis dolor, optio necessitatibus sint mollitia a ducimus, omnis laudantium, iure minus in saepe.`
@@ -95,83 +95,92 @@ export const orgs = [
 export const projects = [
     {
         id: 1,
-        service: "Market Research",
+        service: "Market Research & Intelligence",
         name: "Lorem, ipsum dolor sit amet.",
         cover_img: "/assets/project-1.jpg",
         tagline: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.`,
-        photos: []
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.
+        amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.`,
+        photos: ["/assets/project-1.jpg", "/assets/project-2.jpg", "/assets/project-3.jpg", "/assets/project-4.png" ]
     },
     {
         id: 2,
-        service: "Engineering & Technology Research",
-        name: "Lorem, ipsum dolor sit amet.",
+        service: "Scientific & Technology Research",
+        name: "Int magni! Odio, exercitationem.",
         cover_img: "/assets/project-2.jpg",
         tagline: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.`,
-        photos: []
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.
+        amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.`,
+        photos: ["/assets/project-2.jpg", "/assets/project-3.jpg", "/assets/project-4.png", "/assets/project-1.jpg"]
     },
     {
         id: 3,
-        service: "Scientific Research",
+        service: "Scientific & Technology Research",
         name: "Lorem, ipsum dolor sit amet.",
         cover_img: "/assets/project-3.jpg",
         tagline: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.`,
-        photos: []
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.
+        amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.`,
+        photos: ["/assets/project-3.jpg", "/assets/project-4.png", "/assets/project-1.jpg", "/assets/project-2.jpg"]
     },
     {
         id: 4,
         service: "ICT & Facilities Maintenance",
-        name: "Lorem, ipsum dolor sit amet.",
+        name: "Impedit quam minima.",
         cover_img: "/assets/project-4.png",
         tagline: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.`,
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.
+        amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.`,
         photos: []
     },
     {
         id: 5,
-        service: "Engineering & Technology Research",
-        name: "Lorem, ipsum dolor sit amet.",
+        service: "Scientific & Technology Research",
+        name: "Odio, ut exercitationem.",
         cover_img: "/assets/project-2.jpg",
         tagline: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.`,
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.
+        amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.`,
         photos: []
     },
     {
         id: 6,
-        service: "Scientific Research",
-        name: "Lorem, ipsum dolor sit amet.",
+        service: "Scientific & Technology Research",
+        name: "Inventore nesciunt sint.",
         cover_img: "/assets/project-3.jpg",
         tagline: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.`,
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.
+        amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.`,
         photos: []
     },
     {
         id: 7,
-        service: "Scientific Research",
-        name: "Lorem, ipsum dolor sit amet.",
+        service: "Renewable Energy",
+        name: "Ex modi animi voluptate.",
         cover_img: "/assets/project-3.jpg",
         tagline: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.`,
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.
+        amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.`,
         photos: []
     },
     {
         id: 8,
         service: "ICT Facilities Maintenance",
-        name: "Lorem, ipsum dolor sit amet.",
+        name: "Accusamus dolores impedit.",
         cover_img: "/assets/project-4.png",
         tagline: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.`,
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.
+        amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.`,
         photos: []
     },
     {
         id: 9,
-        service: "Engineering & Technology Research",
-        name: "Lorem, ipsum dolor sit amet.",
+        service: "Digital Marketing",
+        name: "Nesciunt sint magni! Odio.",
         cover_img: "/assets/project-2.jpg",
         tagline: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.",
-        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.`,
+        description: `Lorem ipsum dolor sit amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.
+        amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem. Amet consectetur adipisicing elit. Esse nulla quasi ab provident illum accusamus dolores impedit quam minima, natus ut temporibus amet ullam, ea ratione maiores illo odit ex modi animi voluptate inventore nesciunt sint magni! Odio, ut exercitationem.`,
         photos: []
     },
 ]

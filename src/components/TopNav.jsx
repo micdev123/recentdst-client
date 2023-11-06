@@ -1,17 +1,30 @@
+import { useState } from "react";
 import { FiMenu } from "react-icons/fi"
 import { RiSendPlaneFill } from "react-icons/ri"
+import Contact from "./Contact";
+import { Link } from "react-router-dom";
 
-const TopNav = ({ setContact }) => {
+const TopNav = () => {
+    const [openContactModal, setOpenContactModal] = useState(false); // Contact form modal
+    // Methods managing modal
+    const handleOpenModal = () => setOpenContactModal(true);
+    const handleCloseModal = () => setOpenContactModal(false);
     return (
         <div className='top-nav pt-6 pb-4 relative'>
+            <div className={openContactModal ? 'w-[100%] h-[100%] fixed top-0 left-0 bg-zinc-900 opacity-[0.2] z-10' : ''}></div>
+            {openContactModal && (
+                <div className="contact_form w-[90%] absolute top-[3rem] right-0 left-0 mx-auto bg-white rounded-md p-[2rem] z-10 md:w-fit">
+                    <Contact onClose={handleCloseModal} />
+                </div>
+            )}
             <nav>
                 <ul className='flex items-center justify-between'>
                     <div className="items-center gap-x-[2.5rem] md:flex">
-                        <li>
+                        <Link to="/">
                             <h2 className='logo text-[1rem]'>
                                 ReCentDST
                             </h2>
-                        </li>
+                        </Link>
                         <div className="hidden items-center gap-x-[1.8rem] text-[12px] font-medium md:flex">
                             
                         </div>
@@ -33,7 +46,7 @@ const TopNav = ({ setContact }) => {
                             Contact
                         </li>
                         <button
-                            onClick={() => setContact(true)}
+                            onClick={() => handleOpenModal()}
                             className='text-[11px] rounded-sm bg-zinc-700 text-white py-[5px] px-[15px] flex items-center gap-x-2 border-0 outline-none'
                         >
                             <RiSendPlaneFill className='text-[14px]' />
