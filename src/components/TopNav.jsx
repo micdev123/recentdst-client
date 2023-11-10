@@ -56,7 +56,10 @@ const TopNav = () => {
                     {/* Mobile Nav */}
                     {mobileNav && (
                         <div className="mobile_nav w-[100%] absolute top-[3.5rem] bg-white p-[2rem] text-[14px] rounded-md z-30">
-                            <Link to='/about_us'>
+                            <Link
+                                to='/about_us'
+                                onClick={() => setMobileNav(false)}
+                            >
                                 About Us
                             </Link>
                             <li>
