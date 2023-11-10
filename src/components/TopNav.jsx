@@ -65,12 +65,12 @@ const TopNav = () => {
                             <li>
                                 Services
                             </li>
-                            <li>
+                            <Link
+                                to='/projects'
+                                onClick={() => setMobileNav(false)}
+                            >
                                 Portfolio
-                            </li>
-                            <li>
-                                Contact
-                            </li>
+                            </Link>
                             <button
                                 onClick={() => {
                                     handleOpenModal();
