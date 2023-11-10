@@ -26,23 +26,18 @@ const TopNav = () => {
                                 ReCentDST
                             </h2>
                         </Link>
-                        <div className="hidden items-center gap-x-[1.8rem] text-[12px] font-medium md:flex">
-                            
-                        </div>
-                        {/* <li className='border-[1px] border-zinc-500 rounded-md px-[10px] py-[2px] ml-[2rem]'>
-                            Login
-                        </li> */}
+                        
                     </div>
                     <div className="hidden text-[13px] items-center gap-x-[1.8rem] md:flex">
-                        <li>
+                        <Link to='about_us'>
                             About Us
-                        </li>
+                        </Link>
                         <li>
                             Services
                         </li>
-                        <li>
+                        <Link to='/projects'>
                             Portfolio
-                        </li>
+                        </Link>
                         <li>
                             Contact
                         </li>
@@ -61,9 +56,9 @@ const TopNav = () => {
                     {/* Mobile Nav */}
                     {mobileNav && (
                         <div className="mobile_nav w-[100%] absolute top-[3.5rem] bg-white p-[2rem] text-[14px] rounded-md z-30">
-                            <li>
+                            <Link to='/about_us'>
                                 About Us
-                            </li>
+                            </Link>
                             <li>
                                 Services
                             </li>

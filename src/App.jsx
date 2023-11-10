@@ -6,13 +6,14 @@ import TopNav from "./components/TopNav";
 import Header from "./components/Home/Header";
 import Footer from "./components/Footer";
 import SingleProject from "./routes/SingleProject";
+import AboutUs from "./routes/AboutUs";
+import Projects from "./routes/Projects";
 
 function App() {
   
   return (
     <div className="App relative">
       <Router>
-        
         <header className="max-w-[90%] mx-auto sm:max-w-[90%] xl:max-w-[80%]">
           <TopNav />
         </header>
@@ -26,7 +27,15 @@ function App() {
           <Route
               path="/project/:id"
               element={<SingleProject />}
-            />
+          />
+          <Route
+              path="/about_us/"
+              element={<AboutUs />}
+          />
+          <Route
+              path="/projects/"
+              element={<Projects />}
+          />
         </Routes>
         <footer>
         <Footer />

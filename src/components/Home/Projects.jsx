@@ -63,7 +63,7 @@ const Projects = () => {
         <section className="projects mt-[3rem] md:mt-[5rem]">
             <div className="head max-w-[90%] mx-auto sm:max-w-[90%] xl:max-w-[80%]">
                 <h2 className='text-[1.8rem] font-medium'>
-                    Our Projects
+                    Our Portfolio
                 </h2>
                 <p className='text-[13px] mt-2 md:w-[60%]'>
                     Lorem ipsum dolor sit amet consectetur adipisicing elit. Sapiente laboriosam est aspernatur autem, numquam neque illum maxime, omnis aliquam ipsam porro! Praesentium odio ducimus.
