@@ -15,7 +15,7 @@ const Projects = () => {
             <div className="head mt-[0.5rem] md:mt-[2rem]">
                 <div className={openContactModal ? 'w-[100%] h-[100%] fixed top-0 left-0 bg-zinc-900 opacity-[0.2] z-10' : ''}></div>
                 {openContactModal && (
-                    <div className="contact_form w-[100%] absolute top-[-12rem] right-0 left-0 mx-auto bg-white rounded-md p-[1rem]  z-20 md:w-fit md:p-[2rem] md:top-[2rem]">
+                    <div className="contact_form w-[100%] absolute top-[4rem] right-0 left-0 mx-auto bg-white rounded-md p-[1rem]  z-20 md:w-fit md:p-[2rem] md:top-[2rem]">
                         <Contact onClose={handleCloseModal} />
                     </div>
                 )}
