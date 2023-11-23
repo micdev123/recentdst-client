@@ -3,6 +3,7 @@ import { FaFacebookSquare } from "react-icons/fa"
 import { BiCurrentLocation, BiSolidPhone } from "react-icons/bi"
 import { MdEmail } from "react-icons/md"
 import { AiFillInstagram } from "react-icons/ai"
+import { Link } from "react-router-dom"
 
 const Footer = () => {
     return (
@@ -35,11 +36,18 @@ const Footer = () => {
                         <h2 className='text-[0.9rem] font-medium'>
                             Information
                         </h2>
-                        <p className='text-[13.5px] my-[8px]'>About Us</p>
-                        <p className='text-[13.5px] my-[8px]'>Projects</p>
-                        <p className='text-[13.5px] my-[8px]'>Blog</p>
-                        <p className='text-[13.5px] my-[8px]'>Career</p>
-                        <p className='text-[13.5px] my-[8px]'>Testimonials</p>
+                        <Link to='about_us' className='text-[13.5px] my-[8px]'>
+                            About Us
+                        </Link>
+                        <Link to='/projects' className='text-[13.5px] my-[8px]'>
+                            Projects
+                        </Link>
+                        <a href="#services" className='text-[13.5px] my-[8px]'>
+                            Services
+                        </a>
+                        <a href="#testimonials" className='text-[13.5px] my-[8px]'>
+                            Testimonials
+                        </a>
                     </section>
                     <section className="our-services">
                         <h2 className='text-[0.9rem] font-medium'>

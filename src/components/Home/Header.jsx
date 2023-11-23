@@ -6,72 +6,73 @@ import { BiShapeCircle } from "react-icons/bi"
 import { MdShapeLine } from "react-icons/md"
 import { projects } from '../../data'
 import { Link } from 'react-router-dom'
+import { client, urlFor } from '../../client'
+import Slider from './Slider'
 
 const Header = () => {
     const slideRef = useRef(null); // Header Slider Ref
     const autoSlide = true;
-    const autoSlideInterval = 3000;
+    const autoSlideInterval = 10000;
+    const [projects, setProjects] = useState([]);
     const [current, setCurrent] = useState(0);
     const [featuredProjects, setFeaturedProjects] = useState([]);
 
-    const selectRandomProjects = () => {
-        const shuffledProjects = projects.sort(() => 0.5 - Math.random());
-        const selectedProjects = shuffledProjects.slice(0, 3);
-        setFeaturedProjects(selectedProjects);
-    };
+    
+    useEffect(() => {
+        const getProjects = '*[_type == "portfolio"]';
+        client.fetch(getProjects)
+            .then((data) => {
+                if (data.length > 3) {
+                    setProjects(data)
+                }
+                else {
+                    setFeaturedProjects(data);
+                }
+
+            })
+            .catch(console.error)
+    }, [])
+
+    useEffect(() => {
+        const selectRandomProjects = () => {
+            if(projects.length > 0) {
+                const shuffledProjects = projects.sort(() => 0.5 - Math.random());
+                const selectedProjects = shuffledProjects.slice(0, 3);
+                setFeaturedProjects(selectedProjects);
+            }
+        };
+
+        selectRandomProjects(); // Initial selection of random projects
+
+        const hourInterval = setInterval(selectRandomProjects, 3600000);
+        return () => {
+            clearInterval(hourInterval);
+        }; 
+    }, [projects]);
+
 
     useEffect(() => {
         const next = () => setCurrent((curr) => (curr + 1) % (featuredProjects.length || 1));
 
-        const intervalId = setInterval(next, autoSlideInterval);
+        if (autoSlide && featuredProjects.length > 0) {
+            const intervalId = setInterval(next, autoSlideInterval);
 
-        return () => {
-        clearInterval(intervalId);
-        };
-    }, [autoSlide, featuredProjects]);
+            return () => {
+                clearInterval(intervalId);
+            }; 
+        }
+        
+    }, [autoSlide, autoSlideInterval, featuredProjects]);
 
-    useEffect(() => {
-        selectRandomProjects(); // Initial selection of random projects
-
-        const hourInterval = setInterval(selectRandomProjects, 3600000);
-
-        return () => {
-        clearInterval(hourInterval);
-        };
-    }, []);
-
+    // console.log(projects);
     
-    // console.log(featuredProjects);
+
     return (
         <div className='header max-w-[90%] mx-auto sm:max-w-[90%] xl:max-w-[80%]'>
-            {/* Header Container */}
-            <section className="header-container flex flex-col items-center justify-center gap-[2rem] px-[1.5rem] pt-[2rem] rounded-md relative md:flex-row md:py-[3rem] md:pr-[3rem]">
+            <section className="header-container relative md:py-[3rem] md:pr-[3rem]">
                 {/* Header Hero Text Content */}
-                <div className="hero-text-content w-[100%] md:max-w-[48%]">
-                    <p className='text-[11px] font-medium'>
-                        {featuredProjects && featuredProjects[current]?.service}
-                    </p>
-                    <div className="flex overflow-hidden">
-                        <div className="transition-transform linear duration-500" ref={slideRef}>
-                            <h2 className='text-[1.3rem] mb-3 font-medium md:text-[1.8rem] md:leading-[2.5rem]'>
-                                {featuredProjects && featuredProjects[current]?.name}
-                            </h2>
-                            <p className='text-[13.5px]'>
-                                {featuredProjects && featuredProjects[current]?.tagline}
-                            </p>
-                        </div>
-                    </div>
-                    {/* Proof */}
-                    {/* <div className=""></div> */}
-                    <Link to={`/project/${featuredProjects && featuredProjects[current]?.id}`} className='w-fit text-[11px] rounded-sm mt-[1rem] bg-zinc-700 text-white py-[5px] px-[15px] flex items-center gap-x-2 border-0'>
-                        Read more
-                    </Link>
-                </div>
-                {/* Header Hero Image Container */}
-                <div className="hero-image w-[100%]">
-                    <div className="md:w-[30rem] md:h-[20rem]">
-                        <img src={featuredProjects && featuredProjects[current]?.cover_img} alt="" className='w-[100%] h-[100%] object-cover rounded-md' />
-                    </div>
+                <div className="">
+                    <Slider currentProject={featuredProjects[current]} />
                     <div className="flex items-center justify-center mt-[1rem]">
                         {featuredProjects && featuredProjects.map((_, index) => (
                             <BsDot

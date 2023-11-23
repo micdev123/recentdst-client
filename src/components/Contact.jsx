@@ -3,6 +3,7 @@ import { AiOutlineClose } from 'react-icons/ai';
 const Contact = ({ onClose }) => {
     const SendMessage = (e) => {
         e.preventDefault();
+        onClose()
     }
     return (
         <div>
@@ -33,9 +34,10 @@ const Contact = ({ onClose }) => {
                     <textarea name="" id="" cols="30" rows="10" placeholder='Message' className='w-[100%] text-[11px] p-[10px] border-[1.5px] outline-none'></textarea>
                 </div>
                 <button
-                type='submit'
-                className="text-[11px] rounded-sm mt-[1rem] bg-zinc-700 text-white py-[5px] px-[15px] flex items-center gap-x-2 border-0">
-                Send Message
+                    type='submit'
+                    className="text-[11px] rounded-sm mt-[1rem] bg-zinc-700 text-white py-[5px] px-[15px] flex items-center gap-x-2 border-0"
+                >
+                    Send Message
                 </button>
             </form>
             </div>

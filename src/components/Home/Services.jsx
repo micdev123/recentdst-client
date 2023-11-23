@@ -1,9 +1,11 @@
-import { useRef, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { MdOutlineNavigateBefore, MdOutlineNavigateNext } from "react-icons/md"
-import { services } from "../../data";
+// import { services } from "../../data";
 import Contact from "../Contact";
+import { client, urlFor } from "../../client";
 
 const Services = () => {
+    const [services, setServices] = useState([])
     const services_container = useRef(null); // Services slider Ref
 
     // Contact Modal State
@@ -23,7 +25,15 @@ const Services = () => {
         services_container.current.scrollLeft += services_container.current.offsetWidth;
     }
 
-    if (!services || !services.length) return null;
+    useEffect(() => {
+        const getServices = '*[_type =="services"]';
+        client.fetch(getServices)
+            .then((data) => setServices(data))
+            .catch(console.error)
+    }, [])
+
+    // console.log(services);
+    // if (!services || !services.length) return null;
     return (
         <section className='services max-w-[90%] mx-auto relative sm:max-w-[90%] xl:max-w-[80%]'>
             <div className={openContactModal ? 'w-[100%] h-[100%] fixed top-0 left-0 bg-zinc-900 opacity-[0.2] z-10' : ''}></div>
@@ -36,8 +46,8 @@ const Services = () => {
                 <div className="services-right-text-content">
                     <p className='text-[12px] font-medium'>ReCentDST Ltd</p>
                     <h3 className='text-[1.8rem] font-medium'>Your Cutting-Edge Research Company</h3>
-                    <p className='text-[12.5px] my-2 md:w-[50%]'>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Reprehenderit aperiam alias suscipit esse facilis officiis qui porro odio eos pariatur.
+                    <p className='text-[13px] my-2 md:w-[50%]'>
+                        Our suite of services is meticulously designed to empower your organization's journey towards excellence. 
                     </p>
                     <button
                        onClick={() => handleOpenModal()}
@@ -62,12 +72,12 @@ const Services = () => {
                 </div>
                 {/* Services Cards */}
                 <div className="services-cards w-[100%] mt-[1rem] flex overflow-x-scroll scrollbar scrollbar-w-[1px] scrollbar-h-[1px] md:gap-x-[1rem]" ref={services_container}>
-                    {services?.map((service) => {
-                        const { id, name, icon, info } = service;
+                    {services?.map((service, index) => {
+                        const { name, icon, info } = service;
                         return (
-                            <div className="service-card min-w-[100%] bg-zinc-200 rounded-md p-[1.5rem] md:min-w-[20rem] md:bg-zinc-100" key={id}>
+                            <div className="service-card min-w-[100%] bg-zinc-200 rounded-md p-[1.5rem] md:min-w-[20rem] md:bg-zinc-100" key={name + index}>
                                 <div className="icon w-[2rem] mb-4">
-                                    <img src={icon} alt="" />
+                                    <img src={urlFor(icon)} alt="" />
                                 </div>
                                 <h2 className='text-[15px] font-medium mb-3'>
                                     {name}

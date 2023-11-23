@@ -16,7 +16,9 @@ const Home = ({ setContact }) => {
             <main className='my-[3rem] md:my-[5rem]'>
                 
                 {/* Services */}
-                <Services setContact={setContact} />
+                <div className="" id="services">
+                    <Services setContact={setContact} />
+                </div>
 
                 {/* Projects */}
                 <Projects />
@@ -25,7 +27,9 @@ const Home = ({ setContact }) => {
                 <TrustedBy />
 
                 {/* Testimonials */}
-                <Testimonials />
+                <div className="" id='testimonials'>
+                    <Testimonials />
+                </div>
 
                 {/* Key Takeaway */}
                 <Accordions />

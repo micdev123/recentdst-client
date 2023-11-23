@@ -33,14 +33,13 @@ const TopNav = () => {
                             About Us
                         </Link>
                         <li>
-                            Services
+                            <a href="#services">
+                                Services
+                            </a>
                         </li>
                         <Link to='/projects'>
                             Portfolio
                         </Link>
-                        <li>
-                            Contact
-                        </li>
                         <button
                             onClick={() => handleOpenModal()}
                             className='text-[11px] rounded-sm bg-zinc-700 text-white py-[5px] px-[15px] flex items-center gap-x-2 border-0 outline-none'
